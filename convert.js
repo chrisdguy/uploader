@@ -1,8 +1,9 @@
-require('dotenv').config();
 const axios = require('axios');
 const fs = require('fs').promises;
 const path = require('path');
 const { parse } = require('luaparse');
+
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 function luaTableToJson(luaTable) {
     if (typeof luaTable !== 'object' || luaTable === null) {
