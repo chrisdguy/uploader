@@ -36,7 +36,7 @@ It reads the `AuctionScraper.lua` file, converts the Lua table data to JSON, and
     Execute the script via the command line, providing the full path to your `AuctionScraper.lua` file as an argument.
 
     ```bash
-    node upload.js AuctionScraper.lua
+    node convert.js AuctionScraper.lua
     ```
 
 ## Building from Source
