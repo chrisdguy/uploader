@@ -1,4 +1,4 @@
-# Epoch Auction House Uploader
+# Project Epoch Auction House Uploader
 
 This script is designed to parse and upload auction house data from the in-game `AuctionScraper` addon to the Epoch Auction House server.
 
