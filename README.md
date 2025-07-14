@@ -7,7 +7,7 @@ It reads the `AuctionScraper.lua` file, converts the Lua table data to JSON, and
 ## Prerequisites
 
   * Node.js (version 20+)
-  * An `AuctionScraper.lua` data file, which can be obtained from the [AuctionScraper](https://github.com/magic62/AuctionScraper) addon.
+  * An `AuctionScraper.lua` data file, which can be obtained from the [AuctionScraper](https://github.com/epoch-gold/AuctionScraper) addon.
 
 ## Setup
 
