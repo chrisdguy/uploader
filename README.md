@@ -61,7 +61,7 @@ This Python script automates the process of launching World of Warcraft, logging
 * Python 3.8+
 * Powershell Scripts Enabled
 * World of Warcraft 3.3.5a Client
-* Uploader.exe that you just built
+* The `uploader.exe` that you just built
 * A `requirements.txt` file is included.
 
 In the uploader directory, create a venv and activate it:
