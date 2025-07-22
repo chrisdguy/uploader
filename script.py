@@ -4,21 +4,19 @@ import pyautogui as pag
 import time
 import os
 
-# File Paths
-exe_path = r"C:\Users\VPS\Documents\wow\Wow.exe"
-scan_path = r"C:\Users\VPS\Documents\wow\WTF\Account\MAGIC\SavedVariables\AuctionScraper.lua"
-
 # Load .env Variables
 print(f"[{datetime.now()}] Loading Environment Variables...")
 load_dotenv()
 password = os.getenv("ACCOUNT_PASSWORD")
+exe_path = os.getenv("EXE_PATH")
+scan_path = os.getenv("SCAN_PATH")
 
 while True:
     print(f"[{datetime.now()}] Launching WoW...")
     try:
         os.startfile(exe_path)
         print("Wow Started!")
-        time.sleep(30)
+        time.sleep(15)
     except Exception as e:
         print(f"[{datetime.now()}] Failed to launch WoW:", e)
 
@@ -43,7 +41,7 @@ while True:
     # Start Scan
     print(f"[{datetime.now()}] Scanning...")
     pag.press("2")
-    time.sleep(1800)
+    time.sleep(1740)
 
     # Reload
     print(f"[{datetime.now()}] Scan Complete!")
