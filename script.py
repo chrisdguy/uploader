@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+from datetime import datetime
 import pyautogui as pag
 import time
 import os
@@ -8,51 +9,52 @@ exe_path = r"C:\Users\VPS\Documents\wow\Wow.exe"
 scan_path = r"C:\Users\VPS\Documents\wow\WTF\Account\MAGIC\SavedVariables\AuctionScraper.lua"
 
 # Load .env Variables
-print("Loading Environment Variables...")
+print(f"[{datetime.now()}] Loading Environment Variables...")
 load_dotenv()
 password = os.getenv("ACCOUNT_PASSWORD")
 
 while True:
-    print("Launching WoW...")
+    print(f"[{datetime.now()}] Launching WoW...")
     try:
         os.startfile(exe_path)
         print("Wow Started!")
-        time.sleep(10)
+        time.sleep(30)
     except Exception as e:
-        print("Failed to launch WoW:", e)
+        print(f"[{datetime.now()}] Failed to launch WoW:", e)
 
     # Login
-    pag.typewrite(password, interval=0.1)
+    pag.write(password, interval=0.5)
     pag.press("enter")
-    time.sleep(5)
-    print("Logged In!")
+    time.sleep(10)
+    print(f"[{datetime.now()}] Logged In!")
 
     # Enter Realm
     pag.press("enter")
-    time.sleep(5)
-    print("Entered Realm!")
+    time.sleep(10)
+    print(f"[{datetime.now()}] Entered Realm!")
 
     # Enter Actioneer GUI
-    print("Starting Scan...")
+    print(f"[{datetime.now()}] Starting Scan...")
     pag.press("1")
-    time.sleep(1)
+    time.sleep(5)
     pag.press("p")
-    time.sleep(1)
+    time.sleep(5)
 
     # Start Scan
-    print("Scanning...")
+    print(f"[{datetime.now()}] Scanning...")
     pag.press("2")
     time.sleep(1800)
 
     # Reload
-    print("Scan Complete")
+    print(f"[{datetime.now()}] Scan Complete!")
     pag.press("3")
     time.sleep(5)
 
     # Exit
-    print("Exiting")
-    pag.press("4")
+    print(f"[{datetime.now()}] Exiting!")
+    pag.hotkey('alt', 'f4')
     time.sleep(10)
 
     # Send Scan Info to DB
+    print(f"[{datetime.now()}] Data Sent!")
     os.startfile(scan_path)
